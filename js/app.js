@@ -8,11 +8,16 @@
     const buttonMenuOpen = document.querySelector(".header__menu-button");
     const buttonMenuClose = document.querySelector(".menu-close");
     const menu = document.querySelector(".menu");
+    const menuLinks = document.querySelectorAll(".menu__link");
     buttonMenuOpen.addEventListener("click", (() => {
         menu.classList.add("active");
         document.documentElement.classList.add("lock");
     }));
     buttonMenuClose.addEventListener("click", (() => {
+        menu.classList.remove("active");
+        document.documentElement.classList.remove("lock");
+    }));
+    for (const link of menuLinks) link.addEventListener("click", (() => {
         menu.classList.remove("active");
         document.documentElement.classList.remove("lock");
     }));
