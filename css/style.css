@@ -740,66 +740,62 @@ html {
 .info {
   padding: 30px 0 70px
 }
+.info ._container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px
+}
 .info h1 {
   font-size: 30px;
   font-weight: 700;
   line-height: 120%;
   text-align: center
 }
-.info__list {
-  counter-reset: section;
-  list-style: none
-}
-.info__list>li {
-  margin-top: 30px;
+.info h2 {
   font-size: 25px;
   font-weight: 700;
+  line-height: 120%
+}
+.info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%
+}
+.info ol {
+  display: flex;
+  flex-direction: column
+}
+.info ol>li {
+  font-size: 18px;
   line-height: 120%;
-  counter-increment: section;
-  counter-reset: subsection
+  list-style-position: inside
 }
-.info__list>li::before {
-  content: counter(section) ". "
-}
-.info__list>li>ol {
-  list-style: none;
-  margin-top: 15px
-}
-.info__list>li>ol>li {
-  counter-increment: subsection;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 120%
-}
-.info__list>li>ol>li::before {
-  padding-right: 5px;
-  content: counter(section) "." counter(subsection) ". "
-}
-.info__list>li>ol>li>ol {
-  list-style: none
-}
-.info__list>li>ol>li>ol>li {
-  counter-increment: subsubsection;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 120%
-}
-.info__list>li>ol>li>ol>li::before {
-  padding-right: 5px;
-  content: counter(section) "." counter(subsection) "." counter(subsubsection) ". "
-}
-.info__list ul {
+.info ul {
   display: flex;
   flex-direction: column;
-  gap: 13px;
-  margin-top: 25px
+  gap: 13px
 }
-.info__list ul>li {
+.info ul>li {
   font-size: 18px;
-  font-weight: 400;
   line-height: 120%;
   list-style-position: inside;
   list-style-type: disc
+}
+.info a,
+.info p {
+  font-size: 18px;
+  line-height: 120%
+}
+.info a {
+  color: #e7ad00;
+  transition: color .5s ease
+}
+.info blockquote {
+  padding: 20px;
+  font-size: 18px;
+  line-height: 150%;
+  background-color: #fff5d6;
+  font-style: italic
 }
 @media (min-width:47.99875em) {
   .fond__item {
@@ -1031,12 +1027,14 @@ html {
   .info h1 {
     font-size: 45px
   }
-  .info__list>li {
-    margin-top: 40px;
+  .info h2 {
     font-size: 30px
   }
-  .info__list>li>ol {
-    margin-top: 25px
+  .info h3 {
+    font-size: 25px
+  }
+  .info a:hover {
+    color: #bd8e00
   }
 }
 @media (min-width:89.99875em) {
