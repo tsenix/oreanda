@@ -180,10 +180,14 @@ html {
 .header__button {
   flex: 0 0 30px;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   width: 30px;
   height: 30px
+}
+.header__button.phone svg {
+  width: 20px;
+  height: 20px
 }
 .main .header__button svg {
   fill: #fff
@@ -859,6 +863,10 @@ html {
   }
   .header__actions {
     gap: 35px
+  }
+  .header__button.phone svg {
+    width: 30px;
+    height: 30px
   }
   .header__button {
     flex: 0 0 40px;
