@@ -655,6 +655,11 @@ html {
   line-height: 120%;
   text-align: center
 }
+.form__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px
+}
 .form__form {
   display: flex;
   flex-direction: column;
@@ -690,15 +695,22 @@ html {
 }
 .form__list-item {
   font-size: 16px;
+  text-align: center;
   line-height: 120%
 }
 .form__text {
-  padding-top: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   font-size: 16px;
   line-height: 120%
 }
+.form__text h3 {
+  font-weight: 700;
+  text-transform: uppercase
+}
 .form__button {
-  align-self: flex-start;
+  align-self: center;
   margin-top: 23px;
   padding: 14px 24px;
   font-size: 16px;
@@ -709,7 +721,9 @@ html {
   transition: all .5s ease
 }
 .form__info {
-  display: none
+  display: flex;
+  flex-direction: column;
+  gap: 30px
 }
 .contacts {
   position: fixed;
@@ -826,23 +840,20 @@ html {
     flex: 0 0 calc(50% - 11px)
   }
   .form__content {
-    display: flex;
+    flex-direction: row;
     gap: 36px
   }
   .form__form {
     flex: 0 0 calc(50% - 18px)
   }
-  .form__form .form__list {
-    display: none
-  }
-  .form__form .form__text {
-    display: none
-  }
   .form__list {
     padding: 0 0 35px
   }
-  .form__text {
-    padding-top: 0
+  .form__list-item {
+    text-align: left
+  }
+  .form__button {
+    align-self: flex-start
   }
   .form__info {
     flex: 0 0 calc(50% - 18px);
