@@ -797,6 +797,27 @@ html {
   background-color: #fff5d6;
   font-style: italic
 }
+.info img {
+  display: block;
+  width: 100%
+}
+.info__table {
+  padding-bottom: 10px;
+  width: 100%;
+  overflow-x: auto
+}
+.info__table table {
+  width: 100%;
+  border-collapse: collapse
+}
+.info__table td,
+.info__table th {
+  padding: 5px 10px;
+  border: 1px solid #d1d1d1
+}
+.info__table th {
+  background-color: #fff5d6
+}
 @media (min-width:47.99875em) {
   .fond__item {
     flex: 0 0 calc(50% - 11px)
